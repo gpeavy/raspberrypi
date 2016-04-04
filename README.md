@@ -32,3 +32,7 @@ network={
     psk="Your_wifi_password"
 }
 ifconfig wlan0
+
+
+sudo apt-get install weavedconnectd
+sudo weavedinstaller
