@@ -1,1 +1,33 @@
 # raspberrypi
+
+Update:
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+Setup bluetooth keyboard and mouse:
+sudo bluetoothctl
+agent on
+default-agent
+scan on
+pair xx:xx:xx:xx:xx (device id)
+(if asked for a "PIN code" -> enter that "PIN code" on your bluetooth keyboard and press ENTER on the bluetooth keyboard)
+trust xx:xx:xx:xx:xx (if not asked for a pin code this may work too)
+connect xx:xx:xx:xx:xx
+
+Time:
+%r
+
+Overscan: Disable
+Change password
+Boot: To CLI
+Auto login: off
+
+WiFi:
+sudo iwlist wlan0 scan
+Edit /etc/wpa_supplicant/wpa_supplicant.conf:
+Add:
+network={
+    ssid="The_ESSID_from_earlier"
+    psk="Your_wifi_password"
+}
+ifconfig wlan0
