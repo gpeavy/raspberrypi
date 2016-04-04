@@ -3,6 +3,7 @@
 Update:
 sudo apt-get update
 sudo apt-get dist-upgrade
+sudo apt-get clean
 
 Setup bluetooth keyboard and mouse:
 sudo bluetoothctl
