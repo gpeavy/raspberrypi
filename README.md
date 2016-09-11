@@ -1,7 +1,7 @@
 # raspberrypi
 
 NOOBS v1.9:
-
+```
 Language (l): English (US)
 Keyboard (9): us
 OSes:
@@ -11,8 +11,8 @@ Data Partition
 OSMC_Pi2
 
 Install (i)
+```
 
--
 Change password:
 ```
 $ passwd
@@ -41,7 +41,6 @@ $ sudo bluetoothctl
 Configure raspi:
 ```
 $ sudo raspi-config
-```
 3 Boot Options:
 B1 Console
 5 Internationalisation Options:
@@ -51,19 +50,37 @@ I3 Change Keyboard Layout: Apple English (US)
 I4 Change Wifi Country: US United States
 9 Advanced Options: 
 
-```
 $ systemctl reboot
 ```
 
 -
 Time:
+```
 %r
+```
 
 WiFi:
+```
 Add wifi network
+Enter password
+```
 
 Install Dataplicity:
 ```
 $ curl -s https://www.dataplicity.com/7tnd0aga.sh | sudo sh
 ```
 
+Install Pagekite:
+```
+# Add our repository to /etc/apt/sources.list
+$ echo deb http://pagekite.net/pk/deb/ pagekite main | sudo tee -a /etc/apt/sources.list
+
+# Add the PageKite packaging key to your key-ring
+$ sudo apt-key adv --recv-keys --keyserver keys.gnupg.net AED248B1C7B2CAC3
+
+# Refresh your package sources by issuing
+$ sudo apt-get update
+
+# Install pagekite !
+$ sudo apt-get install pagekite
+```
