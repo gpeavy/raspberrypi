@@ -59,17 +59,11 @@ $ systemctl reboot
 Time:
 %r
 
-
 WiFi:
-sudo iwlist wlan0 scan
-Edit /etc/wpa_supplicant/wpa_supplicant.conf:
-Add:
-network={
-    ssid="The_ESSID_from_earlier"
-    psk="Your_wifi_password"
-}
-ifconfig wlan0
+Add wifi network
 
+Install Dataplicity:
+```
+$ curl -s https://www.dataplicity.com/7tnd0aga.sh | sudo sh
+```
 
-sudo apt-get install weavedconnectd
-sudo weavedinstaller
