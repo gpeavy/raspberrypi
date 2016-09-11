@@ -49,8 +49,6 @@ I2 Change Timezone: America Los Angeles
 I3 Change Keyboard Layout: Apple English (US)
 I4 Change Wifi Country: US United States
 9 Advanced Options: 
-
-$ systemctl reboot
 ```
 
 -
@@ -83,4 +81,20 @@ $ sudo apt-get update
 
 # Install pagekite !
 $ sudo apt-get install pagekite
+```
+
+Configure Pagekite:
+```
+$ sudo vi /etc/pagekite.d/10_account.rc
+# Enter name and secret
+$ sudo cp 80_sshd.rc.sample 80_sshd.rc
+$ sudo cp 80_httpd.rc.sample 80_httpd.rc
+$ sudo vi 80_httpd.rc
+# Change kite to hass-gpv
+# Change port from 80 to 8123
+```
+
+Reboot:
+```
+$ sudo systemctl reboot
 ```
