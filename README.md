@@ -51,7 +51,6 @@ I4 Change Wifi Country: US United States
 9 Advanced Options: 
 ```
 
--
 Time:
 ```
 %r
@@ -92,6 +91,36 @@ $ sudo cp 80_httpd.rc.sample 80_httpd.rc
 $ sudo vi 80_httpd.rc
 # Change kite to hass-gpv
 # Change port from 80 to 8123
+```
+
+Install nodejs:
+```
+$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+$ sudo apt-get install nodejs
+$ sudo npm install npm@latest -g
+```
+
+Clone projects:
+```
+$ mkdir ~/Projects
+$ cd ~/Projects
+$ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/ifttt-nest-autoaway-trigger.git
+$ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/homebridge-config.git
+$ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/home-assistant-config.git
+```
+
+Install ifttt-nest-autoaway-trigger
+```
+$ cd ~/Projects/ifttt-nest-autoaway-trigger/
+$ sudo useradd --system autoaway
+$ sudo cp etc/default/ifttt-nest-autoaway-trigger /etc/default/
+$ sudo cp etc/systemd/system/ifttt-nest-autoaway-trigger.service /etc/systemd/system/
+$ sudo npm install -g
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable ifttt-nest-autoaway-trigger
+$ sudo systemctl start ifttt-nest-autoaway-trigger
+$ sudo systemctl status ifttt-nest-autoaway-trigger
+# Verify service is running
 ```
 
 Reboot:
