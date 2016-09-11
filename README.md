@@ -1,5 +1,20 @@
 # raspberrypi
 
+NOOBS v1.9:
+
+Language (l): English (US)
+Keyboard (9): us
+OSes:
+Raspbian
+LibreELEC_RPi2
+Data Partition
+OSMC_Pi2
+
+Install (i)
+
+---
+
+
 Update:
 sudo apt-get update
 sudo apt-get dist-upgrade
