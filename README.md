@@ -109,7 +109,7 @@ $ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/homebridge-config.
 $ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/home-assistant-config.git
 ```
 
-Install ifttt-nest-autoaway-trigger
+Install ifttt-nest-autoaway-trigger:
 ```
 $ cd ~/Projects/ifttt-nest-autoaway-trigger/
 $ sudo useradd --system autoaway
@@ -123,7 +123,28 @@ $ sudo systemctl status ifttt-nest-autoaway-trigger
 # Verify service is running
 ```
 
-Reboot:
+Install homebridge:
 ```
+$ cd ~/Projects/homebridge-config/
+$ sudo apt-get install libavahi-compat-libdnssd-dev
+$ sudo useradd --system homebridge
+$ sudo mkdir /var/homebridge
+$ sudo chown homebridge /var/homebridge
+$ sudo cp var/homebridge/config.json /var/homebridge/
+$ sudo cp etc/default/homebridge /etc/default/
+$ sudo cp etc/systemd/system/homebridge.service /etc/systemd/system/
+$ sudo npm install -g homebridge
+$ sudo npm install -g homebridge-nest
+$ sudo npm install -g homebridge-harmonyhub
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable homebridge
+$ sudo systemctl start homebridge
+$ sudo systemctl status homebridge
+# Verify service is running
+```
+
+Cleanup and Reboot:
+```
+$ sudo apt-get autoremove
 $ sudo systemctl reboot
 ```
