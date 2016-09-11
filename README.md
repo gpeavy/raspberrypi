@@ -14,14 +14,19 @@ Install (i)
 
 -
 Change password:
+```
 $ passwd
+```
 
 Update:
+```
 $ sudo apt-get update
 $ sudo apt-get dist-upgrade
 $ sudo apt-get clean
+```
 
 Setup bluetooth keyboard and mouse:
+```
 $ sudo bluetoothctl
 # agent on
 # default-agent
@@ -31,9 +36,12 @@ $ sudo bluetoothctl
 # trust xx:xx:xx:xx:xx (if not asked for a pin code this may work too)
 # connect xx:xx:xx:xx:xx
 # quit
+```
 
 Configure raspi:
+```
 $ sudo raspi-config
+```
 3 Boot Options:
 B1 Console
 5 Internationalisation Options:
@@ -43,7 +51,9 @@ I3 Change Keyboard Layout: Apple English (US)
 I4 Change Wifi Country: US United States
 9 Advanced Options: 
 
+```
 $ systemctl reboot
+```
 
 -
 Time:
