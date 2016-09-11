@@ -25,6 +25,11 @@ $ sudo apt-get dist-upgrade
 $ sudo apt-get clean
 ```
 
+Load ssh public key:
+```
+$ cat ~/.ssh/id_rsa.pub | ssh pi@raspberrypi.local 'cat >> .ssh/authorized_keys'
+```
+
 Setup bluetooth keyboard and mouse:
 ```
 $ sudo bluetoothctl
