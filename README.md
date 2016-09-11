@@ -93,6 +93,25 @@ $ sudo vi 80_httpd.rc
 # Change port from 80 to 8123
 ```
 
+Install VNC:
+```
+$ sudo apt-get install tightvncserver
+```
+Create ~/vnc.sh
+```
+#!/bin/sh
+vncserver :1 -geometry 1920x1080 -depth 24 -dpi 96
+```
+Create ~/stopvnc.sh
+```
+#!/bin/sh
+vncserver -kill :1
+```
+```
+chmod +x vnc.sh
+chmod +x stopvnc.sh
+```
+
 Install nodejs:
 ```
 $ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
