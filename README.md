@@ -58,10 +58,14 @@ Time:
 %r
 ```
 
-WiFi:
+Setup WiFi:
 ```
-Add wifi network
-Enter password
+$ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+# Add
+network={
+    ssid="SSID"
+    psk="Password"
+}
 ```
 
 Install Dataplicity:
