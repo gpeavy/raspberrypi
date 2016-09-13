@@ -91,6 +91,7 @@ Configure Pagekite:
 ```
 $ sudo vi /etc/pagekite.d/10_account.rc
 # Enter name and secret
+$ cd /etc/pagekite.d/
 $ sudo cp 80_sshd.rc.sample 80_sshd.rc
 $ sudo cp 80_httpd.rc.sample 80_httpd.rc
 $ sudo vi 80_httpd.rc
