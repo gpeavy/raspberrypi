@@ -20,7 +20,6 @@ Update:
 $ sudo apt-get update
 $ sudo apt-get dist-upgrade
 $ sudo apt-get install screen
-$ sudo apt-get clean
 ```
 
 Load ssh public key:
@@ -175,6 +174,7 @@ $ wget -Nnv https://raw.githubusercontent.com/home-assistant/fabric-home-assista
 
 Cleanup and Reboot:
 ```
+$ sudo apt-get clean
 $ sudo apt-get autoremove
 $ sudo systemctl reboot
 ```
