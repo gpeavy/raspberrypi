@@ -6,9 +6,6 @@ Language (l): English (US)
 Keyboard (9): us
 OSes:
 Raspbian
-LibreELEC_RPi2
-Data Partition
-OSMC_Pi2
 
 Install (i)
 ```
