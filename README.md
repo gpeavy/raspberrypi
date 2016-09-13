@@ -51,7 +51,6 @@ I1 Change Locale: en_US.UTF-8 UTF-8
 I2 Change Timezone: America Los Angeles
 I3 Change Keyboard Layout: Apple English (US)
 I4 Change Wifi Country: US United States
-9 Advanced Options: 
 ```
 
 Time:
