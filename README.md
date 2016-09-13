@@ -64,6 +64,7 @@ $ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 network={
     ssid="SSID"
     psk="Password"
+    key_mgmt=WPA-PSK
 }
 ```
 
