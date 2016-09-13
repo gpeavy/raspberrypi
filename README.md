@@ -171,7 +171,28 @@ $ sudo systemctl status homebridge
 
 Install home-assistant:
 ```
-$ wget -Nnv https://raw.githubusercontent.com/home-assistant/fabric-home-assistant/master/hass_rpi_installer.sh && bash hass_rpi_installer.sh
+$ sudo apt-get install python3 python3-venv python3-pip
+$ sudo useradd -rm homeassistant
+$ cd /srv
+$ sudo mkdir homeassistant
+$ sudo chown homeassistant:homeassistant homeassistant
+$ sudo su -s /bin/bash homeassistant 
+$ cd /srv/homeassistant
+$ python3 -m venv homeassistant_venv
+$ source /srv/homeassistant/homeassistant_venv/bin/activate
+$ pip3 install homeassistant
+$ hass
+# Check http://raspberrypi.local:8123
+# Ctrl-c
+$ exit
+$ sudo apt-get install bluetooth libbluetooth-dev
+$ cd ~/Projects/home-assistant-config/
+$ sudo cp etc/systemd/system/home-assistant.service /etc/systemd/system/
+$ sudo systemctl --system daemon-reload
+$ sudo systemctl enable home-assistant
+$ sudo systemctl start home-assistant
+$ sudo systemctl status home-assistant
+# Verify service is running
 ```
 
 Cleanup and Reboot:
