@@ -194,6 +194,27 @@ $ sudo systemctl start home-assistant
 $ sudo systemctl status home-assistant
 # Verify service is running
 ```
+Install no-ip
+```
+$ sudo -s
+$ cd /usr/local/src/
+$ wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+$ tar xf noip-duc-linux.tar.gz
+$ cd noip-2.1.9-1/
+$ make install
+$ /usr/local/bin/noip2 -C
+$ /usr/local/bin/noip2
+$ useradd --system noip
+$ chown noip:noip /usr/local/etc/no-ip2.conf
+$ exit
+$ sudo -u noip noip2
+```
+Install PiVPN
+```
+$ sudo useradd -rm pivpn
+$ curl -L https://install.pivpn.io | bash
+
+
 
 Cleanup and Reboot:
 ```
