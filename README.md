@@ -213,7 +213,7 @@ Install PiVPN
 ```
 $ sudo useradd -rm pivpn
 $ curl -L https://install.pivpn.io | bash
-
+```
 
 
 Cleanup and Reboot:
