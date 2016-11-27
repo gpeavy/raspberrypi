@@ -228,6 +228,7 @@ $ make
 $ sudo make install
 $ sudo cp ../src/bridge/cockpit.pam.insecure /etc/pam.d/cockpit
 $ sudo sh -c "cat ../src/bridge/sshd-reauthorize.pam >> /etc/pam.d/sshd"
+$ sudo ls -s -f /usr/local/lib/security /lib/security
 $ sudo systemctl start cockpit.socket
 $ sudo systemctl enable cockpit.socket
 ```
