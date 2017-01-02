@@ -240,8 +240,8 @@ $ sudo vi /etc/syslog-ng/syslog-ng.conf
 source s_net { udp(ip(0.0.0.0) port(514)); };
 destination d_router { file("/var/log/router.log"); };
 log { source(s_net); destination(d_router); };
-$ service syslog-ng restart
-$ touch /var/log/router.log
+$ sudo service syslog-ng restart
+$ sudo touch /var/log/router.log
 ```
 
 Cleanup and Reboot:
