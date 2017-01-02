@@ -233,6 +233,17 @@ $ sudo systemctl start cockpit.socket
 $ sudo systemctl enable cockpit.socket
 ```
 
+Install syslog-ng:
+```
+$ sudo apt-get install syslog-ng
+$ sudo vi /etc/syslog-ng/syslog-ng.conf
+source s_net { udp(ip(0.0.0.0) port(514)); };
+destination d_router { file("/var/log/router.log"); };
+log { source(s_net); destination(d_router); };
+$ service syslog-ng restart
+$ touch /var/log/router.log
+```
+
 Cleanup and Reboot:
 ```
 $ sudo apt-get clean
