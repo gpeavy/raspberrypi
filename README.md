@@ -4,9 +4,7 @@ NOOBS v2.4:
 ```
 Language (l): English (US)
 Keyboard (9): us
-OSes:
-6'
-]75AQS|=-Raspbian
+OSes: Raspbian
 
 Install (i)
 ```
