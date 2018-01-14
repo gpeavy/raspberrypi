@@ -35,7 +35,7 @@ $ sudo apt-get install screen
 
 Load ssh public key:
 ```
-$ cat ~/.ssh/id_rsa.pub | ssh pi@raspberrypi.local 'cat >> .ssh/authorized_keys'
+$ ssh-copy-id pi@raspberrypi.local
 ```
 
 Setup bluetooth keyboard and mouse:
