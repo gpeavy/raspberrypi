@@ -128,9 +128,9 @@ Clone projects:
 ```
 $ mkdir ~/Projects
 $ cd ~/Projects
-$ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/ifttt-nest-autoaway-trigger.git
-$ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/homebridge-config.git
-$ git clone ssh://gpv@GarrettsMacBookPro.local:/Users/gpv/git/home-assistant-config.git
+$ git clone ssh://gpv@Garretts-MacBook-Pro.local:/Users/gpv/git/ifttt-nest-autoaway-trigger.git
+$ git clone ssh://gpv@Garretts-MacBook-Pro.local:/Users/gpv/git/homebridge-config.git
+$ git clone ssh://gpv@Garretts-MacBook-Pro.local:/Users/gpv/git/home-assistant-config.git
 ```
 
 Install ifttt-nest-autoaway-trigger:
